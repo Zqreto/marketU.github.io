@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmprendeU</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="header">
+  <h2 class="header-logo">EmprendeU</h2>
+  <div class="user-menu-wrapper">
+    <button class="user-btn" id="userMenu"></button>
+    </div>
+</header>
+
+<main class="dashboard">
+
+  <!-- GRÁFICO DE VENTAS -->
+  <div class="emp-top-grid">
+
+    <div class="emp-section">
+      <h2>Gráficos de ventas</h2>
+      <div class="chart-card">
+        <div class="chart-bars">
+          <div class="bar-group">
+            <div class="bar" style="height:55%"></div>
+            <span>Ene</span>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height:72%"></div>
+            <span>Feb</span>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height:48%"></div>
+            <span>Mar</span>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height:88%"></div>
+            <span>Abr</span>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height:65%"></div>
+            <span>May</span>
+          </div>
+          <div class="bar-group">
+            <div class="bar" style="height:91%"></div>
+            <span>Jun</span>
+          </div>
+        </div>
+        <div class="chart-legend">
+          <span class="legend-dot"></span> Ventas mensuales
+        </div>
+      </div>
+    </div>
+
+    <div class="emp-section">
+      <h2>Últimos pedidos</h2>
+      <div class="orders-card">
+        <table class="orders-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Producto</th>
+              <th>Cliente</th>
+              <th>Estado</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#1042</td>
+              <td>Artesanía cerámica</td>
+              <td>Ana López</td>
+              <td><span class="status delivered">Entregado</span></td>
+              <td>$45.000</td>
+            </tr>
+            <tr>
+              <td>#1041</td>
+              <td>Bolso tejido</td>
+              <td>Carlos Ruiz</td>
+              <td><span class="status pending">Pendiente</span></td>
+              <td>$78.000</td>
+            </tr>
+            <tr>
+              <td>#1040</td>
+              <td>Vela aromática</td>
+              <td>María Torres</td>
+              <td><span class="status transit">En camino</span></td>
+              <td>$32.000</td>
+            </tr>
+            <tr>
+              <td>#1039</td>
+              <td>Set de joyas</td>
+              <td>Laura Gómez</td>
+              <td><span class="status delivered">Entregado</span></td>
+              <td>$120.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MIS PRODUCTOS -->
+  <div class="emp-products-header">
+    <h2>Mis productos</h2>
+    <div class="emp-actions">
+      <button class="btn-manage" id="manageBtn">
+        + Administrar productos ▼
+      </button>
+      <div class="manage-dropdown" id="manageDropdown">
+        <a href="#">➕ Agregar producto</a>
+        <a href="#">✏️ Editar productos</a>
+        <a href="#">🗑️ Eliminar producto</a>
+        <a href="#">📦 Ver inventario</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-info">
+        <span class="product-name">Artesanía cerámica</span>
+        <span class="product-price">$45.000</span>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-info">
+        <span class="product-name">Bolso tejido</span>
+        <span class="product-price">$78.000</span>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-img"></div>
+      <div class="product-info">
+        <span class="product-name">Vela aromática</span>
+        <span class="product-price">$32.000</span>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<script src="src/script.js"></script>
+</body>
+</html>

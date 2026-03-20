@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="chat-page">
+<div class="chat-window">
+
+  <!-- Botón volver -->
+  <a href="usuario.html" class="back-link">
+    <span class="material-icons">arrow_back</span>
+    <span class="back-label">Volver</span>
+  </a>
+
+  <!-- ── SIDEBAR ── -->
+  <aside class="chat-sidebar" id="chat-sidebar">
+
+    <div class="sidebar-header">
+      <span class="header-label">Mensajes</span>
+      <button class="icon-btn sidebar-close" id="sidebar-close" title="Cerrar">
+        <span class="material-icons">close</span>
+      </button>
+    </div>
+
+    <div class="sidebar-search">
+      <span class="material-icons">search</span>
+      <input type="text" id="search-input" placeholder="Buscar conversación...">
+    </div>
+
+    <ul class="chat-list" id="chat-list">
+
+      <li class="chat-item active"
+          data-name="María García" data-initials="MG"
+          data-color-bg="#EADDFF" data-color-text="#6750A4"
+          data-preview="Hola, ¿cómo estás?">
+        <div class="avatar" style="background:#EADDFF;color:#6750A4">MG</div>
+        <div class="item-content">
+          <span class="item-headline">María García</span>
+          <span class="item-supporting">Hola, ¿cómo estás?</span>
+        </div>
+        <div class="item-trailing">
+          <span class="item-time">10:42</span>
+          <span class="badge">2</span>
+        </div>
+      </li>
+
+      <li class="chat-item"
+          data-name="Carlos López" data-initials="CL"
+          data-color-bg="#EADDFF" data-color-text="#6750A4"
+          data-preview="El pedido llegó ayer">
+        <div class="avatar" style="background:#EADDFF;color:#6750A4">CL</div>
+        <div class="item-content">
+          <span class="item-headline">Carlos López</span>
+          <span class="item-supporting">El pedido llegó ayer</span>
+        </div>
+        <div class="item-trailing">
+          <span class="item-time">09:15</span>
+        </div>
+      </li>
+
+      <li class="chat-item"
+          data-name="Tienda Andina" data-initials="TA"
+          data-color-bg="#d4f0f0" data-color-text="#1fb5b5"
+          data-preview="¿Tienen stock disponible?">
+        <div class="avatar" style="background:#d4f0f0;color:#1fb5b5">TA</div>
+        <div class="item-content">
+          <span class="item-headline">Tienda Andina</span>
+          <span class="item-supporting">¿Tienen stock disponible?</span>
+        </div>
+        <div class="item-trailing">
+          <span class="item-time">Ayer</span>
+          <span class="badge">1</span>
+        </div>
+      </li>
+
+      <li class="chat-item"
+          data-name="Ana Martínez" data-initials="AM"
+          data-color-bg="#fde8e8" data-color-text="#c0392b"
+          data-preview="Perfecto, muchas gracias!">
+        <div class="avatar" style="background:#fde8e8;color:#c0392b">AM</div>
+        <div class="item-content">
+          <span class="item-headline">Ana Martínez</span>
+          <span class="item-supporting">Perfecto, muchas gracias!</span>
+        </div>
+        <div class="item-trailing">
+          <span class="item-time">Lun</span>
+        </div>
+      </li>
+
+      <li class="chat-item"
+          data-name="Pedro Suárez" data-initials="PS"
+          data-color-bg="#e8f5e9" data-color-text="#2e7d32"
+          data-preview="Te mando la foto del producto">
+        <div class="avatar" style="background:#e8f5e9;color:#2e7d32">PS</div>
+        <div class="item-content">
+          <span class="item-headline">Pedro Suárez</span>
+          <span class="item-supporting">Te mando la foto del producto</span>
+        </div>
+        <div class="item-trailing">
+          <span class="item-time">Dom</span>
+        </div>
+      </li>
+
+    </ul>
+  </aside>
+
+  <!-- Overlay oscuro (móvil) -->
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- ── PANEL PRINCIPAL ── -->
+  <section class="chat-main">
+
+    <div class="chat-topbar">
+      <button class="icon-btn sidebar-open" id="sidebar-open" title="Contactos">
+        <span class="material-icons">menu</span>
+      </button>
+      <div class="avatar topbar-avatar" id="topbar-avatar"
+           style="background:#EADDFF;color:#6750A4">MG</div>
+      <div class="topbar-info">
+        <div class="topbar-name" id="topbar-name">María García</div>
+        <div class="topbar-status">En línea</div>
+      </div>
+      <button class="icon-btn hide-sm" title="Videollamada">
+        <span class="material-icons">videocam</span>
+      </button>
+      <button class="icon-btn hide-sm" title="Llamada">
+        <span class="material-icons">call</span>
+      </button>
+      <button class="icon-btn" title="Más opciones">
+        <span class="material-icons">more_vert</span>
+      </button>
+    </div>
+
+    <div class="messages-area" id="messages-area">
+      <div class="date-label">Hoy</div>
+
+      <div class="bubble-row received">
+        <div class="avatar mini" style="background:#EADDFF;color:#6750A4">MG</div>
+        <div class="bubble-wrap">
+          <div class="bubble">Hola, ¿cómo estás? 👋</div>
+          <div class="bubble-time">10:40</div>
+        </div>
+      </div>
+
+      <div class="bubble-row sent">
+        <div class="bubble-wrap">
+          <div class="bubble">¡Hola! Todo bien, gracias 😊</div>
+          <div class="bubble-time">10:41</div>
+        </div>
+      </div>
+
+      <div class="bubble-row received">
+        <div class="avatar mini" style="background:#EADDFF;color:#6750A4">MG</div>
+        <div class="bubble-wrap">
+          <div class="bubble">¿Tienen el producto disponible todavía?</div>
+          <div class="bubble-time">10:41</div>
+        </div>
+      </div>
+
+      <div class="bubble-row sent">
+        <div class="bubble-wrap">
+          <div class="bubble">Sí, lo tenemos en stock. ¿Cuántas unidades necesitas?</div>
+          <div class="bubble-time">10:42</div>
+        </div>
+      </div>
+
+      <div class="bubble-row received">
+        <div class="avatar mini" style="background:#EADDFF;color:#6750A4">MG</div>
+        <div class="bubble-wrap">
+          <div class="bubble">Necesito 3 unidades, ¿cuál es el costo de envío?</div>
+          <div class="bubble-time">10:42</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="chat-input-area">
+      <div class="input-wrapper">
+        <span class="material-icons hide-sm">sentiment_satisfied</span>
+        <input type="text" id="msg-input" placeholder="Escribe un mensaje...">
+        <span class="material-icons hide-sm">attach_file</span>
+      </div>
+      <button class="send-btn" id="send-btn">
+        <span class="material-icons">send</span>
+      </button>
+    </div>
+
+  </section>
+</div><!-- /chat-window -->
+</div><!-- /chat-page -->
+
+<script src="src/script.js"></script>
+</body>
+</html>

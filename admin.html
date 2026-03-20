@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EmprendeU</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="header">
+  <h2 class="header-logo">EmprendeU</h2>
+  <div class="user-menu-wrapper">
+    <button class="user-btn" id="userMenu">
+      <img src="data:image/png;base64,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" alt="Perfil" class="profile-pic">
+      <span class="profile-name">Admin</span>
+      <span class="chevron" id="chevron">▼</span>
+    </button>
+    <div class="dropdown-menu" id="dropdownMenu">
+      <a href="#"><span class="icon">⚙️</span> Ajustes</a>
+      <hr>
+      <a href="index.html"><span class="icon">🚪</span> Cerrar sesión</a>
+    </div>
+  </div>
+</header>
+
+<main class="dashboard">
+
+  <!-- FILA SUPERIOR: Solicitudes + Reportes -->
+  <div class="admin-top-grid">
+
+    <!-- Solicitudes de registro -->
+    <div class="admin-section">
+      <h2>Solicitudes de registro</h2>
+      <div class="admin-card">
+        <table class="orders-table">
+          <thead>
+            <tr>
+              <th>Usuario</th>
+              <th>Tipo</th>
+              <th>Fecha</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Carlos Ruiz</td>
+              <td><span class="status transit">Emprendedor</span></td>
+              <td>19/03/2026</td>
+              <td class="action-btns">
+                <button class="btn-approve">✔</button>
+                <button class="btn-reject">✘</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Laura Gómez</td>
+              <td><span class="status pending">Usuario</span></td>
+              <td>18/03/2026</td>
+              <td class="action-btns">
+                <button class="btn-approve">✔</button>
+                <button class="btn-reject">✘</button>
+              </td>
+            </tr>
+            <tr>
+              <td>Pedro Sánchez</td>
+              <td><span class="status transit">Emprendedor</span></td>
+              <td>17/03/2026</td>
+              <td class="action-btns">
+                <button class="btn-approve">✔</button>
+                <button class="btn-reject">✘</button>
+              </td>
+            </tr>
+            <tr>
+              <td>María Torres</td>
+              <td><span class="status pending">Usuario</span></td>
+              <td>16/03/2026</td>
+              <td class="action-btns">
+                <button class="btn-approve">✔</button>
+                <button class="btn-reject">✘</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Reportes -->
+    <div class="admin-section">
+      <h2>Reportes</h2>
+      <div class="reports-grid">
+        <div class="report-card">
+          <span class="report-icon">👥</span>
+          <div class="report-data">
+            <span class="report-value">1,240</span>
+            <span class="report-label">Usuarios activos</span>
+          </div>
+        </div>
+        <div class="report-card">
+          <span class="report-icon">🏪</span>
+          <div class="report-data">
+            <span class="report-value">348</span>
+            <span class="report-label">Emprendedores</span>
+          </div>
+        </div>
+        <div class="report-card">
+          <span class="report-icon">📦</span>
+          <div class="report-data">
+            <span class="report-value">5,812</span>
+            <span class="report-label">Pedidos totales</span>
+          </div>
+        </div>
+        <div class="report-card">
+          <span class="report-icon">💰</span>
+          <div class="report-data">
+            <span class="report-value">$98.4M</span>
+            <span class="report-label">Ventas totales</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FILA INFERIOR: Administrar emprendedores + usuarios -->
+  <div class="admin-manage-grid">
+
+    <!-- Administrar emprendedores -->
+    <div class="admin-section">
+      <div class="emp-products-header">
+        <h2>Emprendedores</h2>
+        <div class="emp-actions">
+          <button class="btn-manage" id="manageEmpBtn">⚙ Administrar ▼</button>
+          <div class="manage-dropdown" id="manageEmpDropdown">
+            <a href="#">➕ Agregar emprendedor</a>
+            <a href="#">✏️ Editar emprendedor</a>
+            <a href="#">🚫 Suspender cuenta</a>
+            <a href="#">🗑️ Eliminar emprendedor</a>
+          </div>
+        </div>
+      </div>
+      <div class="admin-card scrollable">
+        <table class="orders-table">
+          <thead>
+            <tr><th>Nombre</th><th>Productos</th><th>Ventas</th><th>Estado</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tienda Andina</td><td>24</td><td>$4.2M</td>
+              <td><span class="status delivered">Activo</span></td>
+            </tr>
+            <tr>
+              <td>Arte &amp; Color</td><td>15</td><td>$2.8M</td>
+              <td><span class="status delivered">Activo</span></td>
+            </tr>
+            <tr>
+              <td>Sabores del Mar</td><td>9</td><td>$1.1M</td>
+              <td><span class="status pending">Suspendido</span></td>
+            </tr>
+            <tr>
+              <td>NaturFresh</td><td>31</td><td>$6.5M</td>
+              <td><span class="status delivered">Activo</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Administrar usuarios -->
+    <div class="admin-section">
+      <div class="emp-products-header">
+        <h2>Usuarios</h2>
+        <div class="emp-actions">
+          <button class="btn-manage" id="manageUsrBtn">⚙ Administrar ▼</button>
+          <div class="manage-dropdown" id="manageUsrDropdown">
+            <a href="#">➕ Agregar usuario</a>
+            <a href="#">✏️ Editar usuario</a>
+            <a href="#">🚫 Suspender cuenta</a>
+            <a href="#">🗑️ Eliminar usuario</a>
+          </div>
+        </div>
+      </div>
+      <div class="admin-card scrollable">
+        <table class="orders-table">
+          <thead>
+            <tr><th>Nombre</th><th>Correo</th><th>Pedidos</th><th>Estado</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ana López</td><td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="11707f70517c70787d3f727e7c">[email&#160;protected]</a></td><td>8</td>
+              <td><span class="status delivered">Activo</span></td>
+            </tr>
+            <tr>
+              <td>Carlos Ruiz</td><td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="15767467797a665578747c793b767a78">[email&#160;protected]</a></td><td>3</td>
+              <td><span class="status delivered">Activo</span></td>
+            </tr>
+            <tr>
+              <td>María Torres</td><td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f69b97849f97b69b979f9ad895999b">[email&#160;protected]</a></td><td>12</td>
+              <td><span class="status de
